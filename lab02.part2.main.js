@@ -16,7 +16,7 @@ const IPCIDR = require('ip-cidr');
 
 /**
 
- * Calculate and return the first host IP address from a CIDR subnet in IPv6 and IPv4 forms.
+ * Calculate and return the first host IP address from a CIDR subnet.
 
  * @param {string} cidrStr - The IPv4 subnet expressed
 
@@ -24,7 +24,7 @@ const IPCIDR = require('ip-cidr');
 
  * @param {callback} callback - A callback function.
 
- * @return {string} (firstIpAddress) - An object containing an IPv6 and IPv4 address.
+ * @return {string} (firstIpAddress) - An IPv4 address.
 
  */
 
@@ -76,8 +76,6 @@ function getFirstIpAddress(cidrStr, callback) {
 
     [firstIpAddress] = cidr.toArray(options);
 
-    IPv6Address = getIpv4MappedIpv6Address(firstIpAddress)
-
   }
 
   // Call the passed callback function.
@@ -88,9 +86,11 @@ function getFirstIpAddress(cidrStr, callback) {
 
   // data as the second argument to the callback function.
 
-  return callback({ipv4: firstIpAddress, ipv6: IPv6Address}, callbackError);
+  return callback(firstIpAddress, callbackError);
 
 }
+
+
 
 
 
@@ -190,8 +190,6 @@ function getIpv4MappedIpv6Address(ipv4) {
 
 }
 
-
-
 /*
 
   This section is used to test function and log any errors.
@@ -238,7 +236,7 @@ function main() {
 
       }
 
-        console.log(`  Response returned from GET request: ${JSON.stringify(data)}`);
+      console.log(`  Response returned from GET request: ${data}`);
 
     });
 
@@ -270,6 +268,8 @@ function main() {
 
 
 
+
+
 /*
 
   Call main to run it.
@@ -277,4 +277,3 @@ function main() {
 */
 
 main();
-
