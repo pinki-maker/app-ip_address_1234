@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DeepsBansal/app-ip_address.git"
+    "url": "git+https://github.com/pinki-maker/app-ip_address.git"
   },
   "author": "ACME",
   "license": "SEE LICENSE IN LICENSE.md",
@@ -18,5 +18,6 @@
   "homepage": "https://github.com/pinki-maker/app-ip_address#readme",
   "dependencies": {
     "ip-cidr": "^2.1.0"
-  }
+  },
+  "devDependencies": {}
 }
