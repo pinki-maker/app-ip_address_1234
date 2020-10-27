@@ -15,6 +15,12 @@ const IPCIDR = require('ip-cidr');
   Assign the imported object to variable path.
 */
 const path = require('path');
+
+/**
+ * Import helper function module located in the same directory
+ * as this module. IAP requires the path object's join method
+ * to unequivocally locate the file module.
+ */
 const { getIpv4MappedIpv6Address } = require(path.join(__dirname, 'ipv6.js'));
 
 /**
@@ -22,7 +28,6 @@ const { getIpv4MappedIpv6Address } = require(path.join(__dirname, 'ipv6.js'));
  * as this module. IAP requires the path object's join method
  * to unequivocally locate the file module.
  */
-
 
 
 class IpAddress {
