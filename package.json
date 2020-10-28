@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/pinki-maker/app-ip_address#readme",
   "dependencies": {
-    "ip-cidr": "^2.1.0"
-  },
-  "devDependencies": {}
+    "ip-cidr": "^2.1.1"
+  }
 }

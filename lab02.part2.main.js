@@ -1,13 +1,8 @@
 /*
-
   Import the ip-cidr npm package.
-
   See https://www.npmjs.com/package/ip-cidr
-
   The ip-cidr package exports a class.
-
   Assign the class definition to variable IPCIDR.
-
 */
 
 const IPCIDR = require('ip-cidr');
@@ -15,17 +10,11 @@ const IPCIDR = require('ip-cidr');
 
 
 /**
-
  * Calculate and return the first host IP address from a CIDR subnet.
-
  * @param {string} cidrStr - The IPv4 subnet expressed
-
  *                 in CIDR format.
-
  * @param {callback} callback - A callback function.
-
  * @return {string} (firstIpAddress) - An IPv4 address.
-
  */
 
 function getFirstIpAddress(cidrStr, callback) {
@@ -95,11 +84,8 @@ function getFirstIpAddress(cidrStr, callback) {
 
 
 /*
-
   This section is used to test function and log any errors.
-
   We will make several positive and negative tests.
-
 */
 
 function main() {
@@ -147,11 +133,7 @@ function main() {
 
 
 /*
-
   Call main to run it.
-
 */
 
 main();
-
-
